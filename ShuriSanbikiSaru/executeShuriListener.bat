@@ -1,0 +1,2 @@
+python Teste_Listener.py
+pause

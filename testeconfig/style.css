@@ -1,0 +1,85 @@
+body
+{
+    background-color: rgba(87,65,173,0);
+    display: flex;
+}
+.container
+{
+    width: 750px;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 800px;
+    padding: 10px;
+    
+}
+.cube
+{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    animation: spin2 5s linear infinite;
+    
+    
+}
+.cube > div
+{
+    position: absolute;
+    background-color: rgba(195,137,254,255);
+    opacity: 0.8;
+    border: 3px solid rgba(222,233,250,255);
+    border-radius: 10px;
+}
+.container:hover .cube > div
+{
+    color: red;
+}
+.front
+{
+    width: 80%;
+    height: 100%;
+    transform: translateZ(20px);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight:800;
+    color: rgba(222,233,250,255);
+}
+.back
+{   
+    width: 80%;
+    height: 100%;
+    transform: translateZ(-20px);
+}
+.left
+{
+    width: 10%;
+    height: 100%;
+    transform: rotateY(90deg) translateZ(300px);
+}
+.right
+{
+    width: 10%;
+    height: 100%;
+    transform: rotateY(-90deg) translateZ(20px);
+}
+.top
+{
+    width: 80%;
+    height: 10%;
+    transform: rotateX(90deg) translateZ(20px);
+}
+.bottom
+{
+    width: 80%;
+    height: 10%;
+    transform: rotateX(-90deg) translateZ(380px);
+}
+@keyframes spin2{ 
+    to {
+        transform: rotate3d(0,1,0, 360deg)
+        
+    }}

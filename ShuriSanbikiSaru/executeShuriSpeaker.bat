@@ -1,0 +1,2 @@
+python Teste_Speaker.py
+pause
