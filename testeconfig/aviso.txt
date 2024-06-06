@@ -1,0 +1,1 @@
+Este aplicativo utiliza a biblioteca vosk e por consequencia um modelo vocal da mesma que é muito grande pra subir junto com os codigos, então de uma olhada no arquivo "Teste_Listener.py"
