@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kJMVvyGt1RbMT7h+1F+JXvsxdzkIEMZYreC/Ag+hElafOcGzvE4N29m4pquPYeDJV2IvVCPGxIVsyndMzRdM5A==",
+  "dgSpecHash": "B+wJg96Ykq8L7p5DBC4zLQx1depsbkSaKYjiz9RGki5IjLxtxKaJJB5/SCQ2hokCa0LAqO1QAuFoa5qzRZpZaw==",
   "success": true,
-  "projectFilePath": "G:\\Users\\Shuri\\Desktop\\projeto\\ShuriApi\\TextInterpreterApi\\TextInterpreterApi\\TextInterpreterApi.csproj",
+  "projectFilePath": "C:\\Users\\Shuri\\Desktop\\Programação\\PersonalAssistant\\ShuriApi\\TextInterpreterApi\\TextInterpreterApi\\TextInterpreterApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Shuri\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Shuri\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.11\\microsoft.entityframeworkcore.6.0.11.nupkg.sha512",

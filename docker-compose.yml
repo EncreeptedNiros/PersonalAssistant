@@ -1,0 +1,39 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: '3.4'
+
+networks:
+  shurinetwork:
+    driver: bridge
+
+services:
+  textinterpreterapi:
+    image: textinterpreterapi
+    build:
+      context: .
+      dockerfile: ./ShuriApi/textInterpreterApi/textInterpreterApi/Dockerfile
+    ports:
+      - 5080:5080
+    networks:
+      - shurinetwork
+
+  shuridb:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: shuri
+
+    ports:
+      - 3306:3306
+    networks:
+      - shurinetwork
+
+  shuriapp:
+    image: shuriapp
+    build: 
+      context: .
+      dockerfile: ./ShuriApp/Dockerfile
+    networks:
+      - shurinetwork 
+
+

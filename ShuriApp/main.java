@@ -95,7 +95,7 @@ public class main {
 			HttpClient httpClient = HttpClient.newBuilder().sslContext(sslContext).build();
 			// Configuração da http request
 			HttpRequest request = HttpRequest.newBuilder().GET()
-					.uri(URI.create("https://localhost:7199/Interpretation" + segura)).build();
+					.uri(URI.create("https://shuriapi:5080/Interpretation" + segura)).build();
 			// envia a requisição
 
 			ArrayList<phrases> frases = new ArrayList<phrases>();

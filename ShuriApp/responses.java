@@ -139,14 +139,91 @@ public class responses {
         // envia a requisição
         HttpResponse<String> response = httpClient.send(request, BodyHandlers.ofString());
     }
-    public void actionAwnser()
+    public boolean actionAwnser(ArrayList<ArrayList<Integer>> i, ArrayList<palavra> x) throws IOException, KeyManagementException, NoSuchAlgorithmException, AWTException, InterruptedException
     {
+        boolean confirm = false;
+        for(int y = 0;y <= x.size();y++)
+        {
+                switch(x.get(y).getLema())
+                {
+                        case "abra":
+                                for(int zx = 0; zx <= x.size(); zx++)
+                                {
+                                        switch(x.get(zx).getLema())
+                                        {
+                                                case "arquivo":
+                                                        arquivo target = new arquivo();
+                                                        target.abrir();
+                                                        break;
+                                                
+                                                case "tarefa":
+                                                        break;
+                                                default:
+                                                        voiceResponse("Não entendi");
+                                                        break;
+                                        }
+                                }
+                                break;
+                        case "crie":
+                                for(int zx = 0; zx <= x.size(); zx++)
+                                {
+                                        switch(x.get(zx).getLema())
+                                        {
+                                                case "arquivo":
+                                                        arquivo target = new arquivo();
+                                                        target.criar();
+                                                        break;
+                                                
+                                                case "tarefa":
+                                                        break;
+                                                default:
+                                                        voiceResponse("Não entendi");
+                                                        break;
+                                        }
+                                }
+                                break;
+                        case "exclua":
+                                for(int zx = 0; zx <= x.size(); zx++)
+                                {
+                                        switch(x.get(zx).getLema())
+                                        {
+                                                case "arquivo":
+                                                        break;
+                                                
+                                                case "tarefa":
+                                                        break;
+                                                default:
+                                                        voiceResponse("Não entendi");
+                                                        break;
+                                        }
+                                }
+                                break;
+                        case "desligar":
+                                m.desligar();
+                                break;
+                        default:
+                                voiceResponse("Não entendi");
+                        break;
+                        
+                }
+        }
 
+        return confirm;
     }
 
-    public void awnser(ArrayList<ArrayList<Boolean>> i, ArrayList<palavra> x)
+    public void awnser(ArrayList<ArrayList<Integer>> i, ArrayList<palavra> x)
         throws AWTException, IOException, InterruptedException, NoSuchAlgorithmException, KeyManagementException 
         {
+                //tem que colocar uma condicional nessa joça
+                boolean action = actionAwnser(i,x);
+                if(action == true)
+                {
+                        voiceResponse("Certo, estou fazendo isso");
+                }
+                else
+                {
+                        voiceResponse("Desculpe, não consegui fazer isso"); 
+                }
                 /*
                 * Frase declarativa Afirmativa
                 * Frase declarativa Negativa
@@ -159,14 +236,8 @@ public class responses {
                 * 
                 * classe
                 */
-
-
-
-
-
                 //voiceResponse(responseString);
                 //actionResponse();
-
         }
 
 }

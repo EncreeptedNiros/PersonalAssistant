@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Users\\Shuri\\Desktop\\projeto\\ShuriApi\\TextInterpreterApi\\TextInterpreterApi\\TextInterpreterApi.csproj": {}
+    "C:\\Users\\Shuri\\Desktop\\Programação\\PersonalAssistant\\ShuriApi\\TextInterpreterApi\\TextInterpreterApi\\TextInterpreterApi.csproj": {}
   },
   "projects": {
-    "G:\\Users\\Shuri\\Desktop\\projeto\\ShuriApi\\TextInterpreterApi\\TextInterpreterApi\\TextInterpreterApi.csproj": {
+    "C:\\Users\\Shuri\\Desktop\\Programação\\PersonalAssistant\\ShuriApi\\TextInterpreterApi\\TextInterpreterApi\\TextInterpreterApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Users\\Shuri\\Desktop\\projeto\\ShuriApi\\TextInterpreterApi\\TextInterpreterApi\\TextInterpreterApi.csproj",
+        "projectUniqueName": "C:\\Users\\Shuri\\Desktop\\Programação\\PersonalAssistant\\ShuriApi\\TextInterpreterApi\\TextInterpreterApi\\TextInterpreterApi.csproj",
         "projectName": "TextInterpreterApi",
-        "projectPath": "G:\\Users\\Shuri\\Desktop\\projeto\\ShuriApi\\TextInterpreterApi\\TextInterpreterApi\\TextInterpreterApi.csproj",
+        "projectPath": "C:\\Users\\Shuri\\Desktop\\Programação\\PersonalAssistant\\ShuriApi\\TextInterpreterApi\\TextInterpreterApi\\TextInterpreterApi.csproj",
         "packagesPath": "C:\\Users\\Shuri\\.nuget\\packages\\",
-        "outputPath": "G:\\Users\\Shuri\\Desktop\\projeto\\ShuriApi\\TextInterpreterApi\\TextInterpreterApi\\obj\\",
+        "outputPath": "C:\\Users\\Shuri\\Desktop\\Programação\\PersonalAssistant\\ShuriApi\\TextInterpreterApi\\TextInterpreterApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Shuri\\AppData\\Roaming\\NuGet\\NuGet.Config",

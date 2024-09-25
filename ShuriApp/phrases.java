@@ -148,15 +148,12 @@ public class phrases {
         this.Processado = Processado;
     }
 
-    private ArrayList<Boolean> classeGramatical(boolean positive, int index)
+    private ArrayList<Integer> classeGramatical(boolean positive, int index)
     {
-        ArrayList<Boolean> cod = new ArrayList<Boolean>();
+        ArrayList<Integer> cod = new ArrayList<Integer>();
         if(positive == true)
         {
-            cod.add(false);
-            cod.add(false);
-            cod.add(false);
-            cod.add(false);
+            cod.add(0);
         }
         else
         {
@@ -165,89 +162,54 @@ public class phrases {
             //
             switch (listaDePalavras.get(index).classegramatical) {
                 case "substantivo":
-                    cod.add(false);
-                    cod.add(false);
-                    cod.add(false);
-                    cod.add(true);
+                    cod.add(1);
                     break;
                 case "artigo":
-                    cod.add(false);
-                    cod.add(false);
-                    cod.add(true);
-                    cod.add(false);
+                    cod.add(2);
                     break;
                 case "adjetivo":
-                    cod.add(false);
-                    cod.add(false);
-                    cod.add(true);
-                    cod.add(true);
+                    cod.add(3);
                     break;
                 case "numeral":
-                    cod.add(false);
-                    cod.add(true);
-                    cod.add(false);
-                    cod.add(false);   
+                    cod.add(4);
                     break;
                 case "pronome":
-                    cod.add(false);
-                    cod.add(true);
-                    cod.add(false);
-                    cod.add(true);  
+                    cod.add(5);
                     break;
                 case "verbo":
-                    cod.add(false);
-                    cod.add(true);
-                    cod.add(true);
-                    cod.add(false);   
+                    cod.add(6);  
                     break;
                 case "adverbio":
-                    cod.add(false);
-                    cod.add(true);
-                    cod.add(true);
-                    cod.add(true); 
+                    cod.add(7); 
                     break;
                 case "preposicao:":
-                    cod.add(true);
-                    cod.add(false);
-                    cod.add(false);
-                    cod.add(false); 
+                    cod.add(8);
                     break;
                 case "conjuncao":
-                    cod.add(true);
-                    cod.add(false);
-                    cod.add(false);
-                    cod.add(true);  
+                    cod.add(9);
                     break;
                 case "interjeicao":
-                    cod.add(true);
-                    cod.add(false);
-                    cod.add(true);
-                    cod.add(false);   
+                    cod.add(10); 
                     break;
             
                 default:
-                cod.add(false);
-                cod.add(false);
-                cod.add(false);
-                cod.add(false);
+                    cod.add(11);
                     break;
             }
         }
         
         return cod;
     }
-    private ArrayList<Boolean> concordanciaComAdjacentes(boolean positive, int index)
+    private ArrayList<Integer> concordanciaComAdjacentes(boolean positive, int index)
     {
-        ArrayList<Boolean> cod = new ArrayList<Boolean>();
-        cod.add(true);
-        cod.add(true);
+        ArrayList<Integer> cod = new ArrayList<Integer>();
+        cod.add(4);
         return cod;
     }
-    private ArrayList<Boolean> contexto(boolean positive, int index)
+    private ArrayList<Integer> contexto(boolean positive, int index)
     {
-        ArrayList<Boolean> cod = new ArrayList<Boolean>();
-        cod.add(false);
-        cod.add(false);
+        ArrayList<Integer> cod = new ArrayList<Integer>();
+        cod.add(0);
         return cod;
     }
     private boolean formalidade(Boolean positive, int index)
@@ -261,25 +223,22 @@ public class phrases {
 
 
 
-    private ArrayList<ArrayList<Boolean>> processaFrase() {
+    private ArrayList<ArrayList<Integer>> processaFrase() {
 
-        ArrayList<ArrayList<Boolean>> matriz1 = new ArrayList<ArrayList<Boolean>>();
+        ArrayList<ArrayList<Integer>> matriz1 = new ArrayList<ArrayList<Integer>>();
 
         
         for(int x = 0; x <= listaDePalavras.size();x++)
         {
-            ArrayList<Boolean> cod = new ArrayList<Boolean>();
-            cod.add(listaDePalavras.get(x).conhecida);
+            ArrayList<Integer> cod = new ArrayList<Integer>();
+            //cod.add(listaDePalavras.get(x).conhecida);
             cod.add(classeGramatical(listaDePalavras.get(x).conhecida, x).get(0));
-            cod.add(classeGramatical(listaDePalavras.get(x).conhecida, x).get(1));
-            cod.add(classeGramatical(listaDePalavras.get(x).conhecida, x).get(2));
-            cod.add(classeGramatical(listaDePalavras.get(x).conhecida, x).get(3));
-            cod.add(listaDePalavras.get(x).numero);
+            //cod.add(listaDePalavras.get(x).numero);
             cod.add(concordanciaComAdjacentes(listaDePalavras.get(x).conhecida, x).get(0));
             cod.add(concordanciaComAdjacentes(listaDePalavras.get(x).conhecida, x).get(1));
             cod.add(contexto(listaDePalavras.get(x).conhecida, x).get(0));
-            cod.add(formalidade(listaDePalavras.get(x).conhecida, x));
-            cod.add(entendimento(listaDePalavras.get(x).conhecida));
+            //cod.add(formalidade(listaDePalavras.get(x).conhecida, x));
+            //cod.add(entendimento(listaDePalavras.get(x).conhecida));
             matriz1.add(cod);
 
         }
